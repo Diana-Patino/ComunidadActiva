@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de oferta deportiva con programación de eventos deportivos.">
+    <title>Oferta Deportiva</title>
+    <link rel="stylesheet" href="css/estiloofertadeportiva.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+
+<div style="background-color:white;color:rgb(250, 253, 250);padding:20px;">
+    <nav>
+        <table width="70%" style="background-color:white;">
+            <tr>
+                <th><a style="color: green; text-decoration: none;" href="pages/red-comunitaria.html">Red Comunitaria de Actividad Fisica</a></th>
+                <th><a style="color: green; text-decoration: none;" href="pages/acerca.html">Acerca de nosotros</a></th>
+                <th><a style="color: green; text-decoration: none;" href="pages/contacto.html">Contacto</a></th>
+                <th><a style="color: green; text-decoration: none;" href="pages/escenarios.html">Escenarios deportivos</a></th>
+                <th><a style="color: green; text-decoration: none;" href="pages/oferta.html">Oferta Deportiva</a></th>
+                <th><a style="color: green; text-decoration: none;" href="pages/registro.html">Registro</a></th>
+            </tr>
+        </table>
+    </nav>
+</div>
+
+<div class="carousel">
+    <div><img src="../img/deportes1.jpg" alt="Imagen de deporte 1" style="width: 10%;"></div>
+    <div><img src="../img/deport.avif" alt="Imagen de deporte 2" style="width: 10%"></div>
+    <div><img src="../img/ninosdepor.jpg" alt="Imagen de deporte 3" style="width: 10%;"></div>
+    <div><img src="../img/familiadepor.webp" alt="Imagen de deporte 4" style="width: 10%;"></div>
+</div>
+
+<div style="padding:20px;">
+    <h1 style="text-align:center;">Programación de Eventos Deportivos</h1>
+
+    <h2>Fútbol</h2>
+    <table border="1" width="80%" style="margin:auto; text-align:center;">
+        <tr>
+            <th>Ubicación</th>
+            <th>Modalidad</th>
+            <th>Dirección</th>
+            <th>Hora</th>
+            <th>Grupo de Edad</th>
+            <th>Registro</th>
+        </tr>
+        <tr>
+            <td>Campo Municipal</td>
+            <td>Fútbol 11</td>
+            <td>Calle Fútbol 123</td>
+            <td>10:00 AM</td>
+            <td>12-18 años</td>
+            <td><a href="pages/registro.html">Registrarse</a></td>
+        </tr>
+        <tr>
+            <td>Estadio Central</td>
+            <td>Fútbol 7</td>
+            <td>Avenida Deportes 456</td>
+            <td>3:00 PM</td>
+            <td>16-25 años</td>
+            <td><a href="pages/registro.html">Registrarse</a></td>
+        </tr>
+    </table>
+
+    <h2>Baloncesto</h2>
+    <table border="1" width="80%" style="margin:auto; text-align:center;">
+        <tr>
+            <th>Ubicación</th>
+            <th>Modalidad</th>
+            <th>Dirección</th>
+            <th>Hora</th>
+            <th>Grupo de Edad</th>
+            <th>Registro</th>
+        </tr>
+        <tr>
+            <td>Gimnasio Central</td>
+            <td>Baloncesto 5x5</td>
+            <td>Avenida Deportes 456</td>
+            <td>2:00 PM</td>
+            <td>10-16 años</td>
+            <td><a href="pages/registro.html">Registrarse</a></td>
+        </tr>
+        <tr>
+            <td>Polideportivo Norte</td>
+            <td>Baloncesto 3x3</td>
+            <td>Calle Baloncesto 789</td>
+            <td>5:00 PM</td>
+            <td>18-30 años</td>
+            <td><a href="pages/registro.html">Registrarse</a></td>
+        </tr>
+    </table>
+
+    <h2>Natación</h2>
+    <table border="1" width="80%" style="margin:auto; text-align:center;">
+        <tr>
+            <th>Ubicación</th>
+            <th>Modalidad</th>
+            <th>Dirección</th>
+            <th>Hora</th>
+            <th>Grupo de Edad</th>
+            <th>Registro</th>
+        </tr>
+        <tr>
+            <td>Piscina Municipal</td>
+            <td>Natación Libre</td>
+            <td>Calle Agua 789</td>
+            <td>4:00 PM</td>
+            <td>6-14 años</td>
+            <td><a href="pages/registro.html">Registrarse</a></td>
+        </tr>
+        <tr>
+            <td>Piscina Olímpica</td>
+            <td>Competencia</td>
+            <td>Avenida Natación 101</td>
+            <td>6:00 PM</td>
+            <td>15-25 años</td>
+            <td><a href="pages/registro.html">Registrarse</a></td>
+        </tr>
+    </table>
+</div>
+
+<div class="contact-form">
+    <h2>Cuentanos tu experiencia</h2>
+    <form id="contact-form" action="/submit_contact" method="post">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" placeholder="Tu nombre...">
+
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Tu correo electrónico...">
+
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" placeholder="Escribe tu mensaje..." style="height:200px"></textarea>
+
+        <input type="submit" id="submit-button" class="button" value="Enviar" disabled>
+    </form>
+</div>
+
+</body>
+</html>
