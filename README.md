@@ -4,10 +4,8 @@ Aqui la idea es que vayamos subiendo los progresos del proyecto, inicialmente ac
 Asi la carpeta general se llamara comunidad activa y cada una de sus partes en una carpeta diferente que va a ir siendo manipulada solo por quien acordamos haria la pestaña.
 Me explico, yo estoy haciendo la pagina de Oferta Deportiva - este repositorio se llama Comunidad Activa- dentro del que yo creo una carpeta como Oferta deportiva y ahi es donde creo cada uno de los archivos .html .css .js y su paquete de imagenes o videos, en fin, lo que riquiera.
 
-Recuerden que para subir los cambios desde el VS del perfil personal de cada computador es necesario clonar este repositorio primero, eso creara una carpeta en cada computador que tenga el clon e inicializar git. 
-Luego, para que cada uno suba los cambios que le hizo a su parte de la colaboracion debemos hacer lo que nos enseñaron de Git add .. pego aqui abajo los comandos de git 
+Recuerden que para subir los cambios desde el VS del perfil personal de cada computador es necesario clonar este repositorio primero, eso creara una carpeta en cada computador local, segun la localizacion que le demos. Eso es hace con  el comando
 
-git clone 
+git clone https://github.com/Diana-Patino/ComunidadActiva.git          
 
-
-Hay una forma mas simple de hacerlo con las extensiones de Git Hub en el VS, si alguno necesita ayuda con eso hablen por favor.
+Para agregar los cambios hay que hacer el commit como nos enseñaron o hay una forma mas simple de hacerlo con las extensiones de Git Hub en el VS, si alguno necesita ayuda con eso hablen por favor.
