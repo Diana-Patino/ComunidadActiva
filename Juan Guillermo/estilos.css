@@ -1,0 +1,256 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Fondo con imagen optimizada */
+body::before {
+    content: "";
+    background: url('imagenes/Fondo\ deportivo.jpg') center/cover no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px); /* Mejora de rendimiento */
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* Menú de navegación */
+header {
+    background-color: rgba(51, 51, 51, 0.85);
+    padding: 15px 0;
+    position: relative;
+    z-index: 2;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Título de contacto */
+#contacto-titulo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#contacto-titulo h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+/* Información de contacto */
+#informacion-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: rgba(230, 230, 230, 0.9);
+}
+
+.contacto-texto {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.contacto-texto p {
+    margin-bottom: 15px;
+}
+
+.contacto-texto a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contacto-texto a:hover {
+    text-decoration: underline;
+}
+
+/* Imagen */
+#fotografia {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#fotografia img {
+    max-width: 35%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulario */
+#formulario-contacto {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #388E3C;
+}
+
+/* Pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#cerrar-popup {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#cerrar-popup:hover {
+    background-color: #388E3C;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contacto-texto {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    #fotografia img {
+        max-width: 80%;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacto-texto {
+        font-size: 14px;
+    }
+
+    form label {
+        font-size: 14px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 12px;
+    }
+
+    form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

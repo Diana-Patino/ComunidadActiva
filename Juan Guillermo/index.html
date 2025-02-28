@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contáctanos para obtener más información sobre nuestra comunidad activa y nuestras ofertas deportivas.">
+    <title>Página Web - Contacto</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="https://comunidadactivafwh.wordpress.com/" aria-label="Inicio">Red Comunitaria de Actividad Física</a></li>
+                <li><a href="https://comunidadactivafwh.wordpress.com/about/" aria-label="Acerca de nosotros">Acerca de Nosotros</a></li>
+                <li><a href="https://comunidadactivafwh.wordpress.com/contacto/" aria-label="Contacto">Contacto</a></li>
+                <li><a href="https://comunidadactivafwh.wordpress.com/escenarios-deportivos/" aria-label="Escenarios deportivos">Escenarios Deportivos</a></li>
+                <li><a href="https://comunidadactivafwh.wordpress.com/oferta-deportiva/" aria-label="Oferta deportiva">Oferta Deportiva</a></li>
+                <li><a href="https://comunidadactivafwh.wordpress.com/acceder/" aria-label="Registro">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de contacto -->
+    <main>
+        <section id="contacto-titulo">
+            <h1>Contacto</h1>
+        </section>
+
+        <section id="informacion-contacto">
+            <div class="contacto-texto">
+                <p><strong>Correo electrónico:</strong> <a href="mailto:comunidadactiva@comuniA.com">comunidadactiva@comuniA.com</a></p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/3194304555" target="_blank">3194304555</a></p>
+                <p><strong>Dirección:</strong> Unidad deportiva de Belén Andrés Escobar Jaramillo – Carrera 66B # 31A – 15 - Medellín - Antioquia - Colombia</p>
+                <p>Aeroparque Juan Pablo II Cra. 70 #16</p>
+            </div>
+        </section>
+
+        <!-- Fotografía -->
+        <section id="fotografia">
+            <img src="imagenes/atletas 1.jfif" alt="Atletas en acción en un evento deportivo">
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section id="formulario-contacto">
+            <div class="form-container">
+                <form id="contact-form">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+
+                    <label for="documento">Documento</label>
+                    <input type="text" id="documento" name="documento" required placeholder="Tu documento">
+
+                    <label for="motivo">Motivo del contacto</label>
+                    <input type="text" id="motivo" name="motivo" required placeholder="Motivo de contacto">
+
+                    <label for="observaciones">Observaciones</label>
+                    <textarea id="observaciones" name="observaciones" required placeholder="Escribe tu mensaje"></textarea>
+
+                    <button type="submit" id="enviar-btn">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pop-up de confirmación -->
+    <div id="popup" class="popup" aria-hidden="true">
+        <div class="popup-content">
+            <p>Su solicitud ha sido cargada, en breve momentos un asesor le contactará.</p>
+            <button id="cerrar-popup" aria-label="Cerrar mensaje emergente">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
