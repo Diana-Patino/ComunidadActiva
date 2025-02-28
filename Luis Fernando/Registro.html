@@ -1,0 +1,70 @@
+Nombre Completo<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Ingreso</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="main-title">FORMULARIO DE INGRESO</h1> <!-- Título centrado -->
+    <div class="container">
+        <div class="form-container">
+            <h2 class="highlight-title">REGISTRO</h2> <!-- Título resaltado y más grande -->
+            <form id="formulario">
+                <div class="input-container">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="input-container">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="input-container">
+                    <label for="telefono">Número de Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="input-container">
+                    <label for="como-se-entero">¿Cómo se enteró?</label>
+                    <select id="como-se-entero" name="como-se-entero" required>
+                        <option value="recomendacion">Recomendación de un amigo</option>
+                        <option value="web">Vía Web</option>
+                        <option value="publicidad">Publicidad</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <label for="interes">¿En qué está interesado?</label>
+                    <select id="interes" name="interes" required>
+                        <option value="natacion">Natación</option>
+                        <option value="futbol">Fútbol</option>
+                        <option value="baloncesto">Baloncesto</option>
+                        <option value="Tenis">Tenis</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button">Enviar</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2 class="highlight-title">INICIO DE SESIÓN</h2> <!-- Título resaltado y más grande -->
+            <form id="login-form">
+                <div class="input-container">
+                    <label for="usuario">Nombre Completo:</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+                <div class="input-container">
+                    <label for="correo-login">Correo Electrónico:</label>
+                    <input type="email" id="correo-login" name="correo-login" required>
+                </div>
+                <div class="input-container">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="submit-button">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

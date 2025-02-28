@@ -4,6 +4,25 @@ body {
     padding: 0;
     background-color: #e0f7e0;
 }
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Tamaño mayor para resaltar */
+    animation: slideIn 2s ease-out;
+}
+
+header h1 a {
+    color: white;
+    text-decoration: none;
+}
 
 /*esto es un comentario
 
