@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escenarios Deportivos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Escenarios Deportivos</h1>
+        <p>Encuentra el mejor espacio para ejercitarte en Medellín.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#gimnasios">Gimnasios Urbanos</a></li>
+            <li><a href="#canchas">Canchas Deportivas</a></li>
+            <li><a href="#piscinas">Piscinas</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="gimnasios" class="escenario">
+            <h2>Gimnasios Urbanos</h2>
+            <img src="unidad_belen.jpg" alt="Gimnasios Urbanos">
+            <p>Espacios al aire libre equipados para el entrenamiento físico.</p>
+            <button onclick="toggleDetalles('gimnasios')">Ver más</button>
+            <div class="detalles" id="detalles-gimnasios">
+                <p><strong>Ubicación:</strong> Diferentes parques y espacios públicos en Medellín.</p>
+                <p><strong>Servicios:</strong> Máquinas de ejercicio, barras, bancos y zonas de calistenia.</p>
+                <p><strong>Horario:</strong> Acceso libre 24/7.</p>
+            </div>
+        </section>
+        
+        <section id="canchas" class="escenario">
+            <h2>Canchas Deportivas</h2>
+            <img src="canchas.jpg" alt="Canchas Deportivas">
+            <p>Áreas para fútbol, baloncesto y otros deportes.</p>
+            <button onclick="toggleDetalles('canchas')">Ver más</button>
+            <div class="detalles" id="detalles-canchas"></div>
+        </section>
+        
+        <section id="piscinas" class="escenario">
+            <h2>Piscinas</h2>
+            <img src="piscinas.jpg" alt="Piscinas">
+            <p>Espacios públicos para natación y recreación acuática.</p>
+            <button onclick="toggleDetalles('piscinas')">Ver más</button>
+            <div class="detalles" id="detalles-piscinas"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Red Comunitaria de Actividad Física</p>
+    </footer>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background: #1b5e20;
+            padding: 10px 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .escenario {
+            background: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .escenario:hover {
+            transform: scale(1.02);
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #1b5e20;
+        }
+        .detalles {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #e8f5e9;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function toggleDetalles(id) {
+            let detalles = document.getElementById('detalles-' + id);
+            if (detalles.style.display === 'block') {
+                detalles.style.display = 'none';
+            } else {
+                detalles.style.display = 'block';
+                detalles.innerHTML = `<p>Información detallada sobre ${id.replace('-', ' ')}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
