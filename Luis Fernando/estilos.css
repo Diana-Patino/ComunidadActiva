@@ -103,3 +103,28 @@ header h1 a {
 .submit-button:hover {
     background-color: #388e3c;
 }
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 1em 0 0 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #FFD700;
+    color: #4CAF50;
+}
