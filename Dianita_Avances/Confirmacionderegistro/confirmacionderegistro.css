@@ -85,34 +85,6 @@ main {
     flex-wrap: wrap;
 }
 
-video {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-}
-
-.welcome-text {
-    max-width: 40%;
-    margin-left: 20px;
-}
-
-.welcome-text .title {
-    font-size: 2em; /* Tamaño mayor para el título */
-    font-weight: bold;
-}
-
-.welcome-text .title span {
-    display: block;
-    font-size: 1.5em; /* Tamaño mayor para el subtítulo */
-    font-weight: normal;
-}
-
-.welcome-text p {
-    text-align: left;
-    font-size: 1.2em;
-    line-height: 1.5em;
-}
-
 .info {
     display: flex;
     flex-wrap: wrap;
@@ -163,7 +135,7 @@ video {
     }
 }
 
-.info-block h2 {
+.info-block h2, .info-block h3, .info-block h4, .info-block h5 {
     font-size: 2em; /* Tamaño mayor para resaltar */
     margin-top: 0;
 }
@@ -208,25 +180,60 @@ footer nav ul li a:hover {
     color: #FFD700;
 }
 
-.cta-button {
-    display: none;
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    background-color: #FFD700;
-    color: #4CAF50;
-    padding: 1em 2em;
-    border-radius: 8px 0 0 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
+.carousel {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
 }
 
-.cta-button a {
-    color: #4CAF50;
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
     text-decoration: none;
-    font-weight: bold;
+    display: inline-block;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: darkgreen;
+}
+
+.contact-form {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form input[type=submit] {
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form input[type=submit]:hover {
+    background-color: darkgreen;
 }
 
 /* Modificación para TalentoTech 2025 GRACIAS */
@@ -250,6 +257,27 @@ footer nav ul li a:hover {
     background-color: #FFC107; /* Cambio de color al pasar el mouse */
 }
 
+.cta-button {
+    display: none;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #FFD700;
+    color: #4CAF50;
+    padding: 1em 2em;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.cta-button a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -260,13 +288,33 @@ footer nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
-    .welcome-text {
-        max-width: 100%;
-        margin-left: 0;
-        text-align: center;
+    .carousel {
+        width: 100%;
     }
+    .contact-form {
+        width: 90%;
+    }
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Ajusta la altura según sea necesario */
+    text-align: center;
+}
 
-    .info-block {
-        flex: 1 1 100%;
-    }
+.confirmation-message {
+    background-color: #f0f0f0; /* Color de fondo */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-message h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.confirmation-message p {
+    font-size: 1.2em;
 }
