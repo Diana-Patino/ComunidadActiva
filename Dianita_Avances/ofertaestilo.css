@@ -181,17 +181,6 @@ footer nav ul li a:hover {
     color: #FFD700;
 }
 
-.carousel {
-    width: 80%;
-    margin: auto;
-    padding: 20px 0;
-}
-
-.carousel img {
-    width: 100%;
-    height: auto;
-}
-
 .button {
     background-color: green;
     color: white;
