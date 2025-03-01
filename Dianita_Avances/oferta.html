@@ -119,8 +119,8 @@
 </div>
 
 <!-- Contenedor para los formularios -->
-<div class="form-container">
-    <div class="contact-form">
+<div class="form-container" style="display: flex; justify-content: space-around; margin: 0 10px;">
+    <div class="contact-form" style="flex: 1; margin: 10px;">
         <h2>Cuentanos tu experiencia</h2>
         <form id="contact-form" action="/submit_contact" method="post">
             <label for="name">Nombre</label>
@@ -136,7 +136,7 @@
         </form>
     </div>
 
-    <div class="contact-form">
+    <div class="contact-form" style="flex: 1; margin: 10px;">
         <h2>¿Quieres publicar o convocar tu propio evento deportivo?</h2>
         <form id="event-form" action="/submit_event" method="post">
             <label for="event-name">Nombre del Evento</label>
