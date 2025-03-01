@@ -1,12 +1,31 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #e0f7e0; /* Fondo verde claro */
+    background-color: #e0f7e0;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Tamaño mayor para resaltar */
+    animation: slideIn 2s ease-out;
+}
+
+header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
 
 
 .main-title {
