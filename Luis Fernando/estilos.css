@@ -19,6 +19,20 @@ body {
 .container {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.image-container img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 .form-container {
@@ -59,7 +73,7 @@ body {
 .submit-button {
     width: 100%;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: #4CAF50; /* Botón verde pasto */
     color: white;
     border: none;
     border-radius: 5px;
@@ -67,5 +81,5 @@ body {
 }
 
 .submit-button:hover {
-    background-color: #0056b3;
+    background-color: #388e3c;
 }

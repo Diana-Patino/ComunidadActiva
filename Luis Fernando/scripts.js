@@ -5,6 +5,14 @@ document.addEventListener('DOMContentLoaded', function() {
     registroForm.addEventListener('submit', function(event) {
         event.preventDefault();
         const correo = document.getElementById('correo').value;
+        const clave = document.getElementById('clave').value;
+        const confirmarClave = document.getElementById('confirmar-clave').value;
+
+        if (clave !== confirmarClave) {
+            alert('Las claves no coinciden. Por favor, intente nuevamente.');
+            return;
+        }
+
         verificarCorreo(correo, function(isVerified) {
             if (isVerified) {
                 alert('Correo verificado. Registro exitoso.');

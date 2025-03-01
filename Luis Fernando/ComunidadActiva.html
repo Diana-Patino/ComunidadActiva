@@ -1,4 +1,4 @@
-Nombre Completo<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,11 @@ Nombre Completo<!DOCTYPE html>
 <body>
     <h1 class="main-title">FORMULARIO DE INGRESO</h1> <!-- Título centrado -->
     <div class="container">
+        <div class="image-container">
+            <img src="futbol.png" alt="Personas jugando fútbol">
+            <img src="natacion.jpeg" alt="Personas nadando">
+            <img src="baloncesto.png" alt="Personas jugando baloncesto">
+        </div>
         <div class="form-container">
             <h2 class="highlight-title">REGISTRO</h2> <!-- Título resaltado y más grande -->
             <form id="formulario">
@@ -41,6 +46,14 @@ Nombre Completo<!DOCTYPE html>
                         <option value="Tenis">Tenis</option>
                     </select>
                 </div>
+                <div class="input-container">
+                    <label for="clave">Clave:</label>
+                    <input type="password" id="clave" name="clave" required>
+                </div>
+                <div class="input-container">
+                    <label for="confirmar-clave">Confirmar Clave:</label>
+                    <input type="password" id="confirmar-clave" name="confirmar-clave" required>
+                </div>
                 <button type="submit" class="submit-button">Enviar</button>
             </form>
         </div>
@@ -65,5 +78,6 @@ Nombre Completo<!DOCTYPE html>
         </div>
     </div>
 
+    <script src="scripts.js"></script>
 </body>
 </html>
