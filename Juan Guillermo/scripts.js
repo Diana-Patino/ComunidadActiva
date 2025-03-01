@@ -1,18 +1,18 @@
-// Desplazamiento suave al hacer clic en los enlaces del menú
+// Desplazamiento suave solo para enlaces internos
 document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 50, // Ajuste para cabeceras fijas
-                behavior: 'smooth'
-            });
-        }
-    });
+    if (anchor.getAttribute('href').startsWith("#")) {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50, // Ajuste para cabeceras fijas
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
 });
 
 // Obtener elementos del DOM
@@ -23,10 +23,11 @@ const cerrarPopup = document.getElementById("cerrar-popup");
 // Función para validar el formulario antes de enviarlo
 function validarFormulario() {
     const nombre = document.getElementById("nombre").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const mensaje = document.getElementById("mensaje").value.trim();
+    const documento = document.getElementById("documento").value.trim();
+    const motivo = document.getElementById("motivo").value.trim();
+    const observaciones = document.getElementById("observaciones").value.trim();
 
-    if (nombre === "" || email === "" || mensaje === "") {
+    if (nombre === "" || documento === "" || motivo === "" || observaciones === "") {
         alert("Por favor, completa todos los campos.");
         return false;
     }
