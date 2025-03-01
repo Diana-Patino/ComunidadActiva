@@ -1,4 +1,4 @@
-Nombre Completo<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,24 @@ Nombre Completo<!DOCTYPE html>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <header>
+        <h1 id="main-title"><a href="../Mario Avances/index.html">Red Comunitaria de Actividad Física</a></h1>
+        <nav>
+            <ul>
+                <li><a href="../Juan Guillermo/index.html">Contacto</a></li>
+                <li><a href="../Brian Avances/index.html">Escenarios Deportivos</a></li>
+                <li><a href="../Dianita_Avances/oferta.html">Oferta Deportiva</a></li>
+                <li><a href="../Luis Fernando/ComunidadActiva.html">Registro e Inicio de sesión</a></li>
+            </ul>
+        </nav>
+    </header>
     <h1 class="main-title">FORMULARIO DE INGRESO</h1> <!-- Título centrado -->
     <div class="container">
+        <div class="image-container">
+            <img src="futbol.png" alt="Personas jugando fútbol">
+            <img src="natacion.jpeg" alt="Personas nadando">
+            <img src="baloncesto.png" alt="Personas jugando baloncesto">
+        </div>
         <div class="form-container">
             <h2 class="highlight-title">REGISTRO</h2> <!-- Título resaltado y más grande -->
             <form id="formulario">
@@ -41,6 +57,14 @@ Nombre Completo<!DOCTYPE html>
                         <option value="Tenis">Tenis</option>
                     </select>
                 </div>
+                <div class="input-container">
+                    <label for="clave">Clave:</label>
+                    <input type="password" id="clave" name="clave" required>
+                </div>
+                <div class="input-container">
+                    <label for="confirmar-clave">Confirmar Clave:</label>
+                    <input type="password" id="confirmar-clave" name="confirmar-clave" required>
+                </div>
                 <button type="submit" class="submit-button">Enviar</button>
             </form>
         </div>
@@ -65,5 +89,6 @@ Nombre Completo<!DOCTYPE html>
         </div>
     </div>
 
+    <script src="scripts.js"></script>
 </body>
 </html>
