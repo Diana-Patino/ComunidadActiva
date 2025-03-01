@@ -49,4 +49,3 @@ $(document).ready(function(){
         // Aquí puedes añadir código para enviar el formulario mediante AJAX
     });
 });
-
