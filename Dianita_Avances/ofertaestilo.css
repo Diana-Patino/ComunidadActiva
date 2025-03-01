@@ -1,9 +1,11 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #e0f7e0;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #e0f7e0;
 }
+
 header {
     background-color: #4CAF50;
     color: white;
@@ -24,71 +26,158 @@ header h1 a {
     text-decoration: none;
 }
 
-/*esto es un comentario
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
 
-nav {
-    background-color: rgb(72, 151, 78);
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 1em 0 0 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a {
     color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #FFD700;
+    color: #4CAF50;
+}
+
+#highlight {
+    animation: colorChange 7s infinite;
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        color: white;
+    }
+    50% {
+        color: #FFD700;
+    }
+}
+
+main {
     padding: 20px;
 }
 
-nav table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-nav th {
-    text-align: left;
-    padding: 10px;
-    background-color: white;
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
-nav a {
-    color: green;
-    text-decoration: none;
+.info-block {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(50% - 40px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.info-block.left {
+    animation-name: fadeInLeft;
 }
 
-.table-container {
-    margin: 20px;
+.info-block.right {
+    animation-name: fadeInRight;
 }
 
-table {
-    width: 70%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+@keyframes fadeInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
-th {
-    background-color: rgb(72, 151, 78);
+.info-block h2, .info-block h3, .info-block h4, .info-block h5 {
+    font-size: 2em; /* Tamaño mayor para resaltar */
+    margin-top: 0;
+}
+
+.info-block p {
+    font-size: 1.2em; /* Tamaño mayor para subtítulo */
+}
+
+.info-block img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #4CAF50;
     color: white;
+    padding: 0.5em;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
-tr:hover {
-    background-color: #ddd;
+footer nav ul li {
+    margin: 0 10px;
 }
 
-.registration-link {
-    color: rgb(72, 151, 78);
+footer nav ul li a {
+    color: white;
     text-decoration: none;
 }
 
-.registration-link:hover {
+footer nav ul li a:hover {
     text-decoration: underline;
+    color: #FFD700;
 }
 
 .carousel {
@@ -145,6 +234,57 @@ tr:hover {
 
 .contact-form input[type=submit]:hover {
     background-color: darkgreen;
+}
+
+/* Modificación para TalentoTech 2025 GRACIAS */
+.talentotech {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 1em; /* Tamaño más pequeño */
+    color: #1E3A8A; /* Azul oscuro */
+    font-weight: bold; /* Negrita */
+    font-family: 'Roboto', sans-serif; /* Tipo de letra más tecnológico y moderno */
+    background-color: #FFD700; /* Fondo amarillo */
+    padding: 5px 10px; /* Espaciado interno más pequeño */
+    border-radius: 8px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.talentotech:hover {
+    background-color: #FFC107; /* Cambio de color al pasar el mouse */
+}
+
+.cta-button {
+    display: none;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #FFD700;
+    color: #4CAF50;
+    padding: 1em 2em;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.cta-button a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 768px) {

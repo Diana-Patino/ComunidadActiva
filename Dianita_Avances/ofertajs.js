@@ -48,5 +48,16 @@ $(document).ready(function(){
         alert('Formulario enviado con éxito');
         // Aquí puedes añadir código para enviar el formulario mediante AJAX
     });
-});
 
+    // Mostrar el botón de llamada a la acción después de 5 segundos
+    setTimeout(() => {
+        const ctaButton = document.getElementById('cta-button');
+        ctaButton.style.display = 'block';
+    }, 5000);
+
+    // Mostrar el texto "TalentoTech 2025 GRACIAS" después de 5 segundos
+    setTimeout(() => {
+        const talentotech = document.getElementById('talentotech');
+        talentotech.style.display = 'block';
+    }, 5000);
+});
